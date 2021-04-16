@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <!--links html to css,different fonts & icons-->  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    </head>
+    <body style="font-family:Ubuntu Condensed">
+      
+         <div id="top">
+    
+      <!--header of website--> 
+        <div class="header">
+          <h1>74 Streets</h1>
+          <!--sidebar for responsive--> 
+            <div id="mainbox" onclick="openFunction()">&#9776;</div>
+            <div id="menu" class="sidemenu">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+          </div>
+      </div>
+      </div>
+  
+  <!--Navbar--> 
+    <nav>
+    
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+    </div>
+        
+        <section>
+            <div class = "aboutimage">
+              <img src="ps4.jpg" style="max-width:100%">
+            </div>
+
+            <div class = "content">
+                <h2>About Us</h2>
+                <span><!-- line here --></span>
+
+                <p> Our mission is what drives us to do everything possible to expand
+                human potential. We do that by creating 
+                groundbreaking sshoes, by making our products more sustainably,
+                by building a creative and diverse global 
+                team and by making a positive impact in communities around the world.
+                Based in Auckland, New Zealand, 74 Streets, Inc. includes the Nike, Adidas, Jordan,
+                vans, puma, and new balance brands.</p>
+                
+                    <ul class = "icons">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=Tt7bzxurJ1I" target="_blank"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CLXZ9qJKbYe/" target="_blank"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/learning-zone/website-templates" target="_blank"><i class = "fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/channels/831844857759793160/831844858511491084" target="_blank"><i class = "fab fa-discord"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+              <!--footer-->  
+                <footer class="footer">
+     <div class="footer-container">
+       <div class="footer-row">
+          <div class="footer-col">
+           <h4>About Us</h4>
+             <ul>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Investors</a></li>
+               <li><a href="#">Sustainability</a></li>
+               <li><a href="#">Terms Of Service</a></li>
+             </ul>
+          </div>
+          <div class="footer-col">
+           <h4>Get Help</h4>
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Payment Options</a></li>
+               <li><a href="#">Returns</a></li>
+               <li><a href="#">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="footer-col">
+           <h4 >Follow Us</h4>
+             <div class="social-links">
+               <a href="https://www.instagram.com/lajauvo/" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.youtube.com/channel/UCkfiE5_QN8H_2CDXI991KIQ" target="_blank"><i class="fab fa-youtube"></i></a>
+               <a href="https://discord.com/channels/831844857759793160/831844858511491084" target="_blank"><i class="fab fa-discord"></i></a>
+             </div>
+          </div>
+       </div>
+     </div>
+   </footer>
+        <!--Scripts to make the header go up & down & to make the sidebar function--> 
+         <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+      document.getElementById("top").style.top = "-1px";
+        } else {
+      document.getElementById("top").style.top = "-150px";
+        }
+      prevScrollpos = currentScrollPos;
+      }
+      
+             function openFunction(){
+       document.getElementById("menu").style.width="300px";
+       document.getElementById("mainbox").style.marginLeft="300px";
+      }
+       function closeFunction(){
+       document.getElementById("menu").style.width="0px";
+       document.getElementById("mainbox").style.marginLeft="0px";
+       document.getElementById("mainbox").innerHTML="&#9776;";
+      }
+  </script>
+        
+    </body>
+</html>
