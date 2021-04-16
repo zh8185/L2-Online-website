@@ -1,0 +1,505 @@
+/* Universal Selector*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*sets all background to white, all fonts to ubuntu condensed, and makes a opacity transition*/
+body {
+  background: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  animation: Transition 1.75s;
+}
+/* contains both title and navbar and makes them stick to the top*/
+#top {
+  position: sticky;
+  top: 0;
+  transition: top 0.3s;
+  width: 100%;
+  display: block;
+  z-index: 100;
+}
+/* styles the navbar*/
+nav {
+  background: white;
+  height: 50px;
+  width: 100%;  
+  box-shadow: 1px 1px 2px;
+}
+/*styles the title of the website*/
+.header {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px;
+  background: lightgrey;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px black;
+  width: 100%;
+}
+/*centers each text*/       
+nav ul {
+  text-align: center;
+}
+/*aligns each link*/
+nav ul li {
+  display: inline-block;
+  padding: 15px;
+  margin: 0 15px;
+}
+/* changes color of nav link text*/
+nav ul li a {
+  color: black;
+}
+/*creates underline for nav links*/
+nav ul li a::after {
+  content:'';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width .3s;
+}
+/*when hovered upon, shows underline animation*/
+nav ul li a:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+/*hides 3bars/menu*/
+.menu {
+  display: none;
+}
+/*creates yellow-box and aligns text to center*/
+.exclusive-container {
+  width: 100%;
+  background: #fcdf03;
+  text-align: center;
+}
+/*text is directly centered in box*/
+.exclusive {
+  padding: 25px;
+}
+/*Sets text in yellow box to uppercase and sets font-size*/
+.exclusive h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+/*makes contents in container fill available spaces*/
+.jimage-container {
+  display: flex;
+}
+/*makes contents in container fill available spaces and makes images relative*/
+.jimage {
+  display: flex;
+  position: relative;
+}
+/*keeps images same size*/
+.imgleft {
+  flex-basis: 50%;
+}
+/*keeps images same size*/
+.imgright {
+  flex-basis: 50%;
+}
+/*styles shop for shoes button */
+.sfs {
+  color: black;
+  background: white;
+  padding: 15px 45px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px;
+}
+/*positions shop for shoe button*/
+.shoebtn {
+  position: absolute; 
+  top: 90%;
+  left: 15px;
+}
+/*contains brands text*/
+.brands-container {
+  margin: 0;
+  width: 100%;
+}
+/*contains all content for brands*/
+.rowcontainer{
+	margin: 5px;
+}
+/*sets brands cards in row*/
+.row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+/*brands card*/
+.image {
+	background: #bdc2c7;
+	position: relative;
+	flex: 1;
+	max-width: 100%;
+	height: 300px;
+	margin: 20px;
+	overflow: hidden;
+	display: flex;
+}
+/*styles the brands card images*/
+.image img{
+	opacity: 0.8;
+	position: relative;
+	vertical-align: top;
+	transition: 0.6s;
+	transition-property: opacity;
+	flex-basis: 100%;
+}
+/*hover over brands cards images to get rid off color*/
+.image:hover img{
+	opacity: 1;
+}
+/*contains text and images and sets image size*/
+.image .details{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+/*styles brands cards text*/
+.image .details h2{
+	text-align: center;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 70px;
+	transition: 0.4s;
+	transition-property: transform;
+}
+/*text animation in brands cards*/
+.image:hover .details h2{
+	transform: translateY(-30px);
+	color: black;
+}
+/*styles description of brands cards*/
+.image .details p{
+	margin: 30px 30px 0 30px;
+	font-size: 10px;
+	text-align: center;
+	opacity: 0;
+	transition: 0.6s;
+	transition-property: opacity, transform;
+}
+/*animates description to position up when hovered upon*/
+.image:hover .details p{
+	opacity: 1;
+	transform: translateY(-40px);
+	color: black;
+}
+/*positions check it out button*/
+.more{
+	position: absolute;
+	border: solid black 1.5px;
+	border-radius: 25px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	bottom:  -70px;
+	transition: 0.6s;
+	transition-property: bottom;
+	left: 15px;
+}
+/*animates check it out button to move up*/
+.image:hover .more{
+	bottom: 5px;
+}
+/*styles check it out button*/
+.more .checkitout{
+	color: #000;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+}
+/*styles brands header*/
+.brands {
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+  font-size: 75px;
+  letter-spacing: .25em;
+  text-align: center;
+}
+/*centers brands header*/
+.brands-container {
+  padding: 5px;
+}
+/*centers brands header*/
+.logocards a {
+	 margin: auto;
+}
+/*responsive logo cards(works at 600px)*/
+.logocards {
+  display: flex;
+  flex: 1;
+  background: #9f9d9b;
+  position: relative;
+	max-width: 100%;
+	width: 460px;
+	height: 150px;
+	overflow: hidden;
+
+}
+/*when hovered on turns logos lightgrey*/
+.logocards a:hover {
+  opacity: .5;
+}
+/*sets all logos into 3 seperate columns with spacing*/
+.lccontainer {
+  column-count: 3;
+  margin: 15px;
+}
+
+/*centers images in slider*/
+.slider-container {
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-align: center;
+}
+/*contains all images and aligns them horizontally */
+.image-container {
+  max-width: 100%;
+  width: 3500px;
+  height: 500px;
+  position: relative;
+  transition: left 2s;
+  -webkit-transition: left 2s;
+  display: flex;
+}
+/*sets ratio of image in slider*/
+.slider-image {
+  float: left;
+  max-width: 500px;
+  max-height: 500px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+/*positions slider buttons*/
+.button-container {
+  top: -20px;
+  position: relative;
+}
+/*styles slider buttons*/
+.slider-button {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: white;
+  bottom: 15px;
+  position: relative;
+}
+/*functions to make slider images animate*/
+#slider-image-1:target ~ .image-container {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-container {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .image-container {
+  left: -1000px;
+}
+
+#slider-image-4:target ~ .image-container {
+  left: -1500px;
+}
+
+#slider-image-5:target ~ .image-container {
+  left: -2000px;
+}
+
+#slider-image-6:target ~ .image-container {
+  left: -2500px;
+}
+
+#slider-image-7:target ~ .image-container {
+  left: -3000px;
+}
+/*background of slider container*/
+.slider-background {
+  background: #9f9d9b;
+  border-radius: 25px;
+  margin-right: 105px;
+  margin-left: 105px;
+  margin-bottom: 15px;
+}
+/*styles trending header*/
+.trending-header {
+  font-family: Covered By Your Grace;
+  margin-left: 25px;
+  background: #F7FF0D;
+  background: -webkit-linear-gradient(to right, #F7FF0D 50%, #000000 50%);
+  background: linear-gradient(to right, #F7FF0D 50%, #000000 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*title of shoes in image slider*/
+.shoeheader {
+  letter-spacing: .15em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  position: relative;
+  top: 75px;
+  text-align: center;
+  color: white;
+}
+/*contains all contents of footer*/
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+/*puts all contents of a footer in a row*/
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*takes away bulletpoints*/
+ul {
+  list-style: none;
+}
+/*styles  footer box*/
+.footer {
+  background: lightgrey;
+  padding: 70px 0;
+}
+/*contains content for 1 row*/
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+/*styles the subheaders of the footer*/
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: helvetica;
+  position: relative;
+}
+/*spaces out each footer link*/
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+/*styles footer links*/
+.footer-col ul li a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+/*animates footer links to right*/
+.footer-col ul li a:hover {
+  color: #8a8a8a;
+  padding-left: 6px;
+}
+/*positions and styles social media links in footer*/
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: grey;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+/*changes color of social media footer links*/
+.footer-col  .social-links a:hover {
+  color: black;
+  background: white;
+}
+/*subnav for products*/
+subnav {
+  width: 100%;
+  overflow: auto;
+}
+/*spacing and styles each subnav link and box for products*/
+subnav ul a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  background-color: grey;
+  width: 14.286%;/* seven links of equal widths */
+  text-align: center;
+}
+/*changes opacity of product subnav links when hovered upon*/
+subnav ul a:hover {
+  opacity: .7;
+  transition: width .3s;
+  color: white;
+}
+/*styles the responsive 3bars icon */
+#mainbox{
+ font-size: 24px;
+ cursor: pointer;
+ transition: all .6s;
+}
+/*styles the sidebar when at 600px or below*/
+.sidemenu{
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ height: 100%;
+ width: 0px;
+ background-color: #222;
+ z-index: 1;
+ padding-top: 100px;
+ overflow-x: hidden;
+ transition: all .5s;
+}
+/*styles sidebar links*/
+.sidemenu a{
+ padding: 8px 8px 8px 64px;
+ text-decoration: none;
+ font-size: 12px;
+ color: #999;
+ display: block;
+}
+/*sidebar links change to white when hovered upon*/
+.sidemenu a:hover{
+  color: white;
+}
+/*positions and styles the close button for sidebar*/
+.sidemenu .closebtn{
+ position: absolute;
+ top: 0px;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 32px;
+}
+
+
+
+
+
+
+
+
+
+
