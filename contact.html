@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <!--links html to css,different fonts & icons-->  
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  </head>
+  <body>
+    
+         <div id="top">
+    
+    <!--header of website--> 
+    <div class="header">
+      <h1>74 Streets</h1>
+      <!--sidebar for responsive--> 
+              <div id="mainbox" onclick="openFunction()">&#9776;</div>
+          <div id="menu" class="sidemenu">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+          </div>
+      </div>
+    </div>
+  
+  <!--Navbar--> 
+   <nav>
+    
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  </div> 
+ <!--Responsive Contact Form-->
+<div class="contact-section">
+
+  <h1>Contact Us</h1>
+  <div class="border"></div>
+  <form class="contact-form" action="index.html" method="get">
+    <input type="text" class="contact-form-text" placeholder="Your name" required>
+    <input type="email" class="contact-form-text" placeholder="Your email" required>
+    <input type="text" class="contact-form-text" placeholder="Your phone" required>
+    <textarea class="contact-form-text" placeholder="Your message" required></textarea>
+    <input type="submit" class="contact-form-btn" value="Send">
+  </form>
+</div>
+
+ <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+      document.getElementById("top").style.top = "-1px";
+        } else {
+      document.getElementById("top").style.top = "-150px";
+        }
+      prevScrollpos = currentScrollPos;
+      }
+  </script>
+       <!--footer-->  
+        <footer class="footer">
+     <div class="footer-container">
+       <div class="footer-row">
+          <div class="footer-col">
+           <h4>About Us</h4>
+             <ul>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Investors</a></li>
+               <li><a href="#">Sustainability</a></li>
+               <li><a href="#">Terms Of Service</a></li>
+             </ul>
+          </div>
+          <div class="footer-col">
+           <h4>Get Help</h4>
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Payment Options</a></li>
+               <li><a href="#">Returns</a></li>
+               <li><a href="#">Contact Us</a></li>
+             </ul>
+          </div>
+          <div class="footer-col">
+           <h4 >Follow Us</h4>
+             <div class="social-links">
+               <a href="https://www.instagram.com/lajauvo/" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.youtube.com/channel/UCkfiE5_QN8H_2CDXI991KIQ" target="_blank"><i class="fab fa-youtube"></i></a>
+               <a href="https://discord.com/channels/831844857759793160/831844858511491084" target="_blank"><i class="fab fa-discord"></i></a>
+             </div>
+          </div>
+       </div>
+     </div>
+   </footer>
+   <!--Scripts to make the header go up & down & to make the sidebar function--> 
+   <script>
+   
+         var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+      document.getElementById("top").style.top = "-1px";
+        } else {
+      document.getElementById("top").style.top = "-150px";
+        }
+      prevScrollpos = currentScrollPos;
+      }
+   
+            function openFunction(){
+       document.getElementById("menu").style.width="300px";
+       document.getElementById("mainbox").style.marginLeft="300px";
+      }
+       function closeFunction(){
+       document.getElementById("menu").style.width="0px";
+       document.getElementById("mainbox").style.marginLeft="0px";
+       document.getElementById("mainbox").innerHTML="&#9776;";
+      }
+   </script>
+
+
+  </body>
+</html>
